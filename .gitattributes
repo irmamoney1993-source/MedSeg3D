@@ -1,0 +1,9 @@
+# Keep source text readable on Windows and GitHub
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

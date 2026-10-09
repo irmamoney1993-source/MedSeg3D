@@ -1,0 +1,9 @@
+# PyTorch CUDA builds are platform-specific; follow https://pytorch.org/get-started/locally/
+# The original environment versions were not archived.
+torch
+monai
+numpy
+nibabel
+matplotlib
+Pillow
+scipy

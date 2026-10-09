@@ -1,0 +1,39 @@
+# Restricted / large datasets and intermediate tensors
+/data/raw/
+/data/cache/
+*.nii
+*.nii.gz
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.zip
+
+# Experiment outputs: track only the fixed anonymous split
+/outputs/*
+!/outputs/splits/
+/outputs/splits/*
+!/outputs/splits/README.md
+!/outputs/splits/train_val_split.json
+
+# Python and environment
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+.idea/
+.vscode/
+.ipynb_checkpoints/
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+.DS_Store
+Thumbs.db

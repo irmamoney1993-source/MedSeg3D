@@ -1,0 +1,64 @@
+{
+  "case_mode": "selected",
+  "case_count": 11,
+  "fixed_validation_size": 97,
+  "model_epochs": {
+    "UNet60": 53,
+    "SegResNet60": 59
+  },
+  "model_checkpoints": {
+    "UNet60": "unet_baseline_40_fast_best.pth",
+    "SegResNet60": "segresnet_baseline_60_fast_best.pth"
+  },
+  "preprocess": "RAS 1mm / CropForeground / Pad64 / channel Z-score",
+  "inference": {
+    "FP32": true,
+    "ROI_SIZE": [
+      64,
+      64,
+      64
+    ],
+    "SW_BATCH_SIZE": 4,
+    "overlap": 0.25
+  },
+  "ET_empty_rule": "Dice=NaN, but FP voxels reported",
+  "case_reasons": {
+    "BRATS_052.nii.gz": [
+      "Top TC improvement"
+    ],
+    "BRATS_184.nii.gz": [
+      "Top TC improvement"
+    ],
+    "BRATS_143.nii.gz": [
+      "Top TC improvement"
+    ],
+    "BRATS_024.nii.gz": [
+      "Largest TC decline",
+      "ET GT-negative / FP audit"
+    ],
+    "BRATS_023.nii.gz": [
+      "Largest TC decline",
+      "ET GT-negative / FP audit"
+    ],
+    "BRATS_413.nii.gz": [
+      "Largest TC decline"
+    ],
+    "BRATS_036.nii.gz": [
+      "Largest ET decline"
+    ],
+    "BRATS_115.nii.gz": [
+      "Largest ET decline"
+    ],
+    "BRATS_177.nii.gz": [
+      "ET GT-negative / FP audit"
+    ],
+    "BRATS_175.nii.gz": [
+      "ET GT-negative / FP audit"
+    ],
+    "BRATS_339.nii.gz": [
+      "Near-zero TC delta reference"
+    ]
+  },
+  "figures_per_case": 4,
+  "notes": "Patient-native spatial orientation / coordinate mapping is not provided by these PNGs"
+}

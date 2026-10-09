@@ -1,0 +1,20 @@
+name: Validate published results
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate source syntax
+        run: python -m compileall -q models scripts
+      - name: Validate release structure
+        run: python scripts/check_public_release.py
+      - name: Validate 97-case metrics
+        run: python scripts/verify_results.py
